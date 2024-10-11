@@ -1,0 +1,321 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #4B4B4B;
+    --primary-text-color: rgb(230, 230, 230);
+    --secondary-text-color: #A5A5A5;
+    --tertiary-text-color: #2E2E2F;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    box-sizing: border-box;
+}
+
+/* --------------------TYPOGRAPHY-------------------- */
+h1, h2, h3, h4, p, button {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: var(--tertiary-text-color);
+}
+
+h1 {
+    color: var(--primary-text-color);
+    font-size: clamp(2.5rem, 1.7778rem + 2.963vw, 4rem);
+}
+
+h3 {
+    font-size: clamp(0.875rem, 0.6944rem + 0.7407vw, 1.25rem);
+    font-weight: 600;
+}
+
+h3, .title-line > p {
+    color: var(--primary-text-color);
+}
+
+.title-line > p {
+    font-size: clamp(0.75rem, 0.6296rem + 0.4938vw, 1rem);
+}
+
+.details-line > p, .watchlist-btn-text > p {
+    color: var(--primary-text-color);
+    font-size: clamp(0.75rem, 0.6296rem + 0.4938vw, 1rem);
+}
+
+.movie-summary > p {
+    color: var(--secondary-bg);
+    font-size: clamp(0.75rem, 0.6296rem + 0.4938vw, 1rem);
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+#no-results-message > h4 {
+    color: var(--secondary-bg)
+}
+
+p {
+    font-size: .875rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+input#search-field {
+    font-size: clamp(1rem, 0.7593rem + 0.9877vw, 1.5rem);
+    font-family: 'FontAwesome';
+    color: var(--primary-text-color);
+}
+
+h4#popup-text {
+    color: var(--secondary-text-color)
+}
+
+/* --------------------IMAGES-------------------- */
+header {
+    background: url('images/header_background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+img#film-icon {
+    width: 70px;
+}
+
+img#movie-poster {
+    min-width: 90px;
+    max-width: 100%;
+    max-height: 250px;
+}
+
+img.add-img {
+    width: 20px;
+    cursor: pointer;
+}
+
+img#star-img {
+    width: 17px;
+}
+
+/* --------------------BUTTONS-------------------- */
+button#my-watchlist-btn {
+    background: none;
+    color: var(--primary-text-color);
+    font-size: .75rem;
+    font-weight: 600;
+    border: solid 2px var(--primary-text-color);
+    border-radius: 30px;
+    padding: .30rem .875rem;
+}
+
+button#my-watchlist-btn:hover {
+    background: var(--primary-text-color);
+    border: solid 2px var(--primary-text-color);
+    color: var(--tertiary-text-color);
+}
+
+button#search-btn {
+    border: none;
+    background: var(--secondary-bg);
+    color: var(--primary-text-color);
+    padding: 0 2rem;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+button#read-more-btn {
+    background: none;
+    color: var(--secondary-bg);
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --------------------LAYOUT-------------------- */
+header {
+    height: 40vh;
+}
+
+div#header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 1.125rem;
+    position: relative;
+    height: 100%;
+}
+
+/* search bar */
+div#input-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+input#search-field {
+    background-color: var(--tertiary-text-color);
+    padding: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+input#search-field:focus {
+    border-color: var(--secondary-text-color);
+    outline: none;
+}
+
+/* search results area */
+main {
+    background: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; do i need this???*/
+    width: 100%;
+    min-height: 60vh;
+}
+
+section#search-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-shrink: 1;
+    margin: 1rem 1rem 2rem 1rem;
+
+    /* border: solid 1px gray; */
+}
+
+div#film-icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 100px;
+}
+
+div#no-results-message {
+    text-align: center;
+    margin-top: 100px;
+}
+
+div#movie-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 1000px;
+    border-bottom: solid 1px var(--primary-text-color);
+    padding: 2rem 1rem;
+    /* border: solid 1px red; */
+}
+
+/* movie description */
+div#movie-poster-container {
+    display: flex;
+    justify-content: right;
+    /* border: solid 1px green; */
+}
+
+div.movie-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: solid 1px blue; */
+}
+
+section#search-results-container > div#movie-container:last-child {
+    border: none;
+}
+
+div.title-line, div.details-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+div.title-line {
+    gap: 10px;
+}
+
+div.watchlist-btn-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+div#popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--tertiary-text-color);
+    padding: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+div#popup-container.show {
+    opacity: 1;
+}
+
+/* .fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease
+}
+
+.fade-in.show {
+    opacity: 1;
+} */
+
+/* --------------------MEDIA QUERIES-------------------- */
+@media (min-width: 800px) {
+    div#header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 4rem;
+    }
+
+    button#my-watchlist-btn {
+        font-size: .875rem;
+        font-weight: bold;
+        border: solid 2px var(--primary-text-color);
+        border-radius: 30px;
+        padding: .35rem 1rem;
+    }
+
+    img#film-icon {
+        width: 90px;
+    }
+
+    section#search-results-container {
+        margin: 1rem 2rem 2rem 2rem;
+    }
+
+    div#film-icon-container, div#no-results-message {
+        margin-top: 130px;
+    }
+
+    div.details-line {
+        gap: 25px;
+    }
+}

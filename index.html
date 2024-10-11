@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Movie Search Project</title>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <h1>Find your film</h1>
+            <a href="watchlist.html">
+                <button id="my-watchlist-btn">My Watchlist</button>
+            </a>
+            <div id="input-container">
+                <input id="search-field" type="text" placeholder=" &#xF002;  Star Wars, Rocky, etc." />
+                <button id="search-btn" type="submit">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="search-results-container">
+            <div id="film-icon-container">
+                <img id="film-icon" src="images/film_icon2.svg" />
+                <h4>Start exploring</h4>
+            </div>
+        </section>
+        <div id="popup-container">
+            <h4 id="popup-text">Movie added!</h4>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
