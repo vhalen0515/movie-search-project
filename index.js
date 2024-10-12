@@ -31,7 +31,7 @@ searchBtn.addEventListener("click", function () {
 
 function renderSearchResults(searchInputValue) {
   fetch(
-    `http://www.omdbapi.com/?apikey=3b14e358&s=${searchInputValue}&type=movie`
+    `https://www.omdbapi.com/?apikey=3b14e358&s=${searchInputValue}&type=movie`
   )
     .then((res) => res.json())
     .then((data) => {
