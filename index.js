@@ -44,7 +44,6 @@ function renderSearchResults(searchInputValue) {
       } else {
         searchResultsContainer.innerHTML = "";
       }
-    //   searchResultsContainer.classList.add("fade-in");
 
       data.Search.forEach((movie) => {
         fetch(
@@ -89,11 +88,6 @@ function renderSearchResults(searchInputValue) {
                     </div>
                 </div>
                 `;
-            // if (isInWatchlist) {
-            //     const movieContainer = document.getElementById('movie-container')
-            //     const watchlistBtnText = movieContainer.querySelector('.add-img')
-            //     watchlistBtnText.style.cursor = 'default'
-            // }
           });
       });
     });

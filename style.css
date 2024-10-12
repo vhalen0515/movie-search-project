@@ -90,9 +90,7 @@ img#film-icon {
 }
 
 img#movie-poster {
-    min-width: 90px;
-    max-width: 100%;
-    max-height: 250px;
+    max-width: 150px;
 }
 
 img.add-img {
@@ -277,15 +275,6 @@ div#popup-container {
 div#popup-container.show {
     opacity: 1;
 }
-
-/* .fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease
-}
-
-.fade-in.show {
-    opacity: 1;
-} */
 
 /* --------------------MEDIA QUERIES-------------------- */
 @media (min-width: 800px) {
