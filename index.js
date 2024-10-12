@@ -47,7 +47,7 @@ function renderSearchResults(searchInputValue) {
 
       data.Search.forEach((movie) => {
         fetch(
-          `http://www.omdbapi.com/?apikey=3b14e358&t=${movie.Title}&type=movie`
+          `https://www.omdbapi.com/?apikey=3b14e358&t=${movie.Title}&type=movie`
         )
           .then((res) => res.json())
           .then((movieDetails) => {
